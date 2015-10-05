@@ -1,0 +1,181 @@
+.board {
+  border-collapse: collapse;
+  background-color: #f5f5f5;
+	color: #333;
+}
+
+.cell {
+  border-top: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  text-align: center;
+  min-width: 40px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.cell-title-top {
+  border-top: 1px solid white !important;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  background-color: white;
+  text-align: center;
+	color: #333;
+	font-size: 24px;
+}
+
+.cell-title-left {
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: white;
+  text-align: center;
+	color: #333;
+  min-width: 10px;
+	font-size: 24px;
+}
+
+.cell-title-bottom {
+  border-top: 1px solid #e3e3e3;
+  border-left: 1px solid white;
+	border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: white;
+  text-align: center;
+	color: #333;
+	font-size: 24px;
+}
+
+.cell-title-right {
+  border-top: 1px solid white;
+  border-left: 1px solid #e3e3e3;
+	border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: white;
+  text-align: center;
+	color: #333;
+	font-size: 24px;
+}
+
+.showBoat.aircraft-carrier {
+    background-color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+.showBoat.battleship {
+    background-color:  #16a085;
+    border: 1px solid #16a085;
+}
+
+.showBoat.submarine {
+    background-color: #f1c40f;
+    border: 1px solid #f1c40f;
+}
+
+.showBoat.cruiser {
+    background-color: #4aa3df;
+    border: 1px solid #4aa3df;
+}
+
+.showBoat.destroyer {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+}
+
+#endGameResult {
+  font-size: 24px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.huge {
+  font-size: 40px;
+}
+
+@media(min-width:768px){
+  .vertical-align {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .vertical-align > [class^="col-"],
+  .vertical-align > [class*=" col-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Optional, to align inner items 
+                                horizontally inside the column */
+  }
+
+  /**
+   *  Do NOT include this part into your stylesheet.
+   *  "flex: 1" or "flex-grow: 1" is added to make the inner div
+   *  - Which is also a flex-item - take up all the horizontal space
+   *  available space inside the flex container (.col-* elements)
+   */
+  .vertical-align > [class^="col-"] > div,
+  .vertical-align > [class*=" col-"] > div {
+    /* flex: 1; */
+    flex-grow: 1;
+  }
+}
+
+.marker {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 30px;
+}
+
+.hit {
+  -moz-animation-duration: .3s;
+  -ms-animation-duration: .3s;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+}
+
+.miss {
+  -moz-animation-duration: .5s;
+  -ms-animation-duration: .5s;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+}
+
+.target {
+  -moz-animation-duration: .2s;
+  -ms-animation-duration: .2s;
+  -webkit-animation-duration: .2s;
+  animation-duration: .2s;
+}
+
+.board {
+  -moz-animation-duration: .3s;
+  -ms-animation-duration: .3s;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+}
+
+.stats {
+  -moz-animation-duration: .4s;
+  -ms-animation-duration: .4s;
+  -webkit-animation-duration: .4s;
+  animation-duration: .4s;
+
+  -moz-animation-delay: .2s;
+  -ms-animation-delay: .2s;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+.logo-text {
+  font-family: 'Russo One', sans-serif;
+}
+
+.navbar-brand {
+  color: #555 !important;
+}
