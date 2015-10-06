@@ -84,7 +84,7 @@ var CellView = Backbone.View.extend({
   },
   fire: function() {
     // this.$el.addClass("target");
-    this.$el.html("<img class='target marker animated slideInDown' src='images/1331901174_bullet_red.png'/>");
+    this.$el.html("<img class='target marker' src='images/1331901174_bullet_red.png'/>");
     // this.$el.html("<i class='target marker animated slideInDown fa fa-bullseye fa-2x text-info' ></i>");
     this.model.fire();
     this.$el.unbind("click");
