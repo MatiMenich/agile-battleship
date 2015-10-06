@@ -77,15 +77,15 @@ var CellView = Backbone.View.extend({
       // this.$el.addClass("hit");
       this.$el.html("<img class='hit marker animated bounceIn' src='images/1331900690_fire.png'/>");
     } else if (this.model.get("state") == "miss") {
-      // this.$el.html("<i class='miss marker animated flipInX fa fa-times fa-2x text-danger' ><i/>");
-      this.$el.html("<img class='miss marker animated flipInX' src='images/1331900805_cross.png'/>");
+      this.$el.html("<i class='miss marker animated flipInX fa fa-times fa-2x text-muted'></i>");
+      // this.$el.html("<img class='miss marker animated flipInX' src='images/1331900805_cross.png'/>");
       // this.$el.addClass("miss");
     }
   },
   fire: function() {
     // this.$el.addClass("target");
     this.$el.html("<img class='target marker animated slideInDown' src='images/1331901174_bullet_red.png'/>");
-    // this.$el.html("<i class='target marker animated slideInDown fa fa-bullseye fa-2x text-info' ><i/>");
+    // this.$el.html("<i class='target marker animated slideInDown fa fa-bullseye fa-2x text-info' ></i>");
     this.model.fire();
     this.$el.unbind("click");
   },
