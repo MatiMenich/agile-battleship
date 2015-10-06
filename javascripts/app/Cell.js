@@ -79,7 +79,7 @@ var CellView = Backbone.View.extend({
     } else if (this.model.get("state") == "miss") {
       this.$el.html("<i class='miss marker animated flipInX fa fa-times fa-2x text-muted'></i>");
       // this.$el.html("<img class='miss marker animated flipInX' src='images/1331900805_cross.png'/>");
-      // this.$el.addClass("miss");
+      this.$el.addClass("miss-cell");
     }
   },
   fire: function() {

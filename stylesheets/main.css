@@ -179,3 +179,8 @@
 .navbar-brand {
   color: #555 !important;
 }
+
+.miss-cell {
+  background-color: #e3e3e3;
+  border-color: #e3e3e3;
+}
