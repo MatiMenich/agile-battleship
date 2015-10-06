@@ -1,3 +1,7 @@
+footer {
+  z-index: 1030;
+}
+
 .board {
   border-collapse: collapse;
   background-color: #d9edf7;
