@@ -1,6 +1,6 @@
-# Agile Battlefield
+# Agile Battleship
 
-A simple battlefield game to show the power of direct feedback in Scrum
+A simple battleship game to show the power of direct feedback in Scrum
 
 Simply execute index.html and play!
 
