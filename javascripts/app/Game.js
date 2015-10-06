@@ -79,7 +79,7 @@ var Game = Backbone.Model.extend({
       } else {
         this.set("endGameState", "lose");
       }
-
+      this.set("shotsRemainingForIteration", 0);
       this.get("board").disable();
       this.get("board").showFleet();
     }
@@ -118,9 +118,17 @@ var GameView = Backbone.View.extend({
   updateEndGameState: function(model, endGameState) {
     var diff = this.model.get("funds") - this.model.get("maxShots") * this.model.get("costPerShot");
     if (endGameState === "lose") {
-      $("#endGameResult").html('<div class="alert alert-info alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong><i class="fa fa-flag-checkered"></i> ¡Juego Finalizado!</strong> Lograste ' + this.euros(diff) + '</div>');
+      console.log(diff);
+      if(diff > 0){
+        $("#endGameResult").html('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong><i class="fa fa-flag-checkered"></i> ¡Juego Finalizado!</strong> Ganaste ' + this.euros(diff) + '</div>');
+      }
+      else if(diff < 0){
+        $("#endGameResult").html('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong><i class="fa fa-flag-checkered"></i> ¡Juego Finalizado!</strong> Perdiste ' + this.euros(diff) + '</div>');
+      } else {
+        $("#endGameResult").html('<div class="alert alert-info alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong><i class="fa fa-flag-checkered"></i> ¡Juego Finalizado!</strong> Mantuviste tu dinero</div>');
+      }
     } else {
-      $("#endGameResult").html('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong><i class="fa fa-trophy"></i> ¡Ganaste!</strong> Lograste ' + this.euros(diff) + '</div>');
+      $("#endGameResult").html('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong><i class="fa fa-trophy"></i> ¡Has destruido la flota!</strong> Ganaste ' + this.euros(diff) + '</div>');
     }
   },
   euros: function(amount) {
