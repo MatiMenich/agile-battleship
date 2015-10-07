@@ -3,7 +3,7 @@
 		<title>Battleship</title>
 		<meta charset="utf-8" /> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+
 		<script type="text/javascript" src="javascripts/ext/underscore.js"></script>
 		<script type="text/javascript" src="vendor/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="javascripts/ext/jshashtable-2.1.js"></script>
@@ -40,8 +40,11 @@
 			    <div class="navbar-header">
 			      <a class="navbar-brand logo-text" href="#">Battleship - Batalla Naval</a>
 			    </div>
+					<p class="navbar-text">Iniciar Juego: </p>
+			    <button type="button" class="btn btn-primary navbar-btn" id="newDeterministicGame">Estrat. Determinística</button>
+			    <button type="button" class="btn btn-primary navbar-btn" id="newAdaptativeGame">Estrat. Adaptativa</button>
 
-		      <div class="navbar-form navbar-right" role="initGame">
+		      <!-- <div class="navbar-form navbar-right" role="initGame">
 		      	<label for="shotsPerIteration">Disparos por iteración:&nbsp;</label>
 		      	<div class="input-group">
 				      <input type="number" min="1" max="40" value="40" id="shotsPerIteration" class="form-control">
@@ -49,7 +52,7 @@
 				        <button class="btn btn-primary" type="button" id="newGame">Empezar un juego nuevo</button>
 				      </span>
 				    </div>
-		      </div>
+		      </div> -->
 
 			  </div>
 			</nav>
